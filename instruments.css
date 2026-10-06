@@ -1,0 +1,627 @@
+/* ============================================================
+   ADHYATMA — INSTRUMENTS PAGE STYLES
+   Shared header, navigation and footer remain in style.css.
+   ============================================================ */
+
+.program-detail.instruments-detail {
+    background: var(--cream);
+    color: #172d22;
+    overflow: hidden;
+}
+
+.instrument-hero {
+    display: grid;
+    grid-template-columns: 48% 52%;
+    min-height: 500px;
+    background: radial-gradient(circle at 78% 30%, #fffdf5, #f1e2c1);
+}
+
+.instrument-hero-image {
+    position: relative;
+    min-height: 500px;
+    overflow: hidden;
+}
+
+.instrument-hero-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(0deg, rgba(14, 39, 27, .55), transparent 48%);
+}
+
+.instrument-hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.image-caption {
+    position: absolute;
+    z-index: 1;
+    bottom: 28px;
+    left: 8%;
+    color: #fff;
+    font: italic 600 25px "Cormorant Garamond", serif;
+}
+
+.instrument-hero-copy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 9%;
+    text-align: center;
+}
+
+.eyebrow {
+    color: #a47a2d;
+    font: 600 10px/1.6 Poppins, sans-serif;
+    letter-spacing: 2.2px;
+}
+
+.hero-star {
+    display: grid;
+    place-items: center;
+    width: 54px;
+    height: 54px;
+    margin: 16px 0 8px;
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+    color: var(--green);
+    font-size: 24px;
+}
+
+.instrument-hero-copy h1 {
+    color: var(--green);
+    font: 700 clamp(48px, 6.2vw, 82px)/.9 "Cormorant Garamond", serif;
+    margin: 8px 0;
+}
+
+.instrument-hero-copy h2 {
+    color: #805e2c;
+    font: 600 clamp(23px, 2.6vw, 34px)/1.1 "Cormorant Garamond", serif;
+}
+
+.hero-ornament {
+    margin: 13px 0;
+    color: var(--gold);
+    letter-spacing: 5px;
+}
+
+.instrument-hero-copy > p {
+    max-width: 500px;
+    color: #48564a;
+    font: 17px/1.65 "Cormorant Garamond", serif;
+}
+
+.instrument-primary-btn,
+.instrument-feature a,
+.instrument-cta > a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    background: var(--green);
+    color: #fff;
+    border: 1px solid var(--green);
+    border-radius: 3px;
+    padding: 13px 18px;
+    margin-top: 18px;
+    font: 600 10px Poppins, sans-serif;
+    letter-spacing: 1px;
+    transition: .25s ease;
+}
+
+.instrument-primary-btn:hover,
+.instrument-feature a:hover,
+.instrument-cta > a:hover {
+    background: #a47a2d;
+    border-color: #a47a2d;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* Featured instrument cards */
+.featured-instruments {
+    padding: 74px 6% 82px;
+    background: #fffaf0;
+}
+
+.section-intro {
+    max-width: 760px;
+    margin: 0 auto 38px;
+    text-align: center;
+}
+
+.section-intro h2,
+.benefits-heading h2 {
+    color: var(--green);
+    font: 700 clamp(32px, 4vw, 48px)/1.05 "Cormorant Garamond", serif;
+    margin: 8px 0 10px;
+}
+
+.section-intro p {
+    color: #687166;
+    font: 17px/1.5 "Cormorant Garamond", serif;
+}
+
+.section-flourish {
+    margin-top: 16px;
+    color: #b18b45;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.instrument-feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    max-width: 1260px;
+    margin: auto;
+    align-items: stretch;
+}
+
+.instrument-feature {
+    background: #fff;
+    border: 1px solid rgba(166, 128, 55, .45);
+    box-shadow: 0 14px 36px rgba(35, 47, 35, .08);
+    overflow: hidden;
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.instrument-feature:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 20px 42px rgba(35, 47, 35, .14);
+}
+
+.feature-photo {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+    background: #e9dfc9;
+}
+
+.feature-photo img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform .5s ease;
+}
+
+.instrument-feature:hover .feature-photo img {
+    transform: scale(1.045);
+}
+
+.feature-number {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #fff8e8;
+    color: var(--green);
+    border: 1px solid #c8a45c;
+    font: 600 13px Poppins, sans-serif;
+}
+
+.feature-content {
+    padding: 25px 25px 28px;
+}
+
+.feature-kicker {
+    color: #a47a2d;
+    font: 600 9px Poppins, sans-serif;
+    letter-spacing: 1.8px;
+}
+
+.feature-content h3 {
+    color: var(--green);
+    font: 700 clamp(38px, 3.6vw, 52px)/1 "Cormorant Garamond", serif;
+    margin: 6px 0 10px;
+}
+
+.feature-content p {
+    color: #5c665d;
+    font: 16px/1.5 "Cormorant Garamond", serif;
+    min-height: 72px;
+}
+
+.feature-content ul {
+    list-style: none;
+    margin: 17px 0 8px;
+    padding: 0;
+}
+
+.feature-content li {
+    position: relative;
+    padding: 7px 0 7px 20px;
+    color: #3f5143;
+    border-top: 1px solid #eee8dc;
+    font: 12px/1.5 Poppins, sans-serif;
+}
+
+.feature-content li::before {
+    content: "✦";
+    position: absolute;
+    left: 0;
+    color: #b18b45;
+}
+
+.instrument-feature a {
+    margin-top: 12px;
+    padding: 12px 13px;
+    font-size: 9px;
+}
+
+/* Weekend batch days: Saturday and Sunday only; no times are shown. */
+.instrument-weekend-batches {
+    padding: 54px 6%;
+    background: linear-gradient(135deg, #fff8e9, #f1e2c8);
+    color: #172d22;
+}
+
+.instrument-weekend-panel {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: clamp(24px, 4vw, 40px);
+    text-align: center;
+    border: 1px solid rgba(166, 128, 55, .55);
+    border-radius: 16px;
+    background: rgba(255, 253, 247, .92);
+    box-shadow: 0 14px 34px rgba(35, 47, 35, .08);
+}
+
+.instrument-weekend-panel h2 {
+    color: var(--green);
+    font: 700 clamp(32px, 4vw, 45px)/1.05 "Cormorant Garamond", serif;
+    margin: 8px 0;
+}
+
+.weekend-intro,
+.weekend-note {
+    color: #687166;
+    font: 14px/1.6 Poppins, sans-serif;
+}
+
+.instrument-weekend-days {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    max-width: 620px;
+    margin: 26px auto 0;
+}
+
+.instrument-weekend-day {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    min-height: 92px;
+    padding: 18px;
+    border: 1px solid #c7a15c;
+    border-radius: 10px;
+    background: #fffaf0;
+}
+
+.weekend-day-icon {
+    display: grid;
+    place-items: center;
+    flex: 0 0 48px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--dark-green);
+    color: #f5dfab;
+    font-size: 23px;
+    box-shadow: inset 0 0 0 1px #d1aa61;
+}
+
+.instrument-weekend-day h3 {
+    margin: 0;
+    color: #6e281c;
+    font: 700 clamp(22px, 3vw, 29px)/1.1 "Cormorant Garamond", serif;
+    text-transform: uppercase;
+}
+
+.weekend-note {
+    margin: 20px 0 0;
+}
+
+/* Music benefits */
+.music-benefits {
+    padding: 62px 6% 70px;
+    background: var(--dark-green);
+    color: #fff;
+}
+
+.benefits-heading {
+    text-align: center;
+    margin-bottom: 34px;
+}
+
+.benefits-heading h2 {
+    color: var(--light-gold);
+}
+
+.benefit-items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+    max-width: 1150px;
+    margin: auto;
+}
+
+.benefit-items > div {
+    padding: 16px 18px;
+    text-align: center;
+    border-right: 1px solid rgba(221, 190, 120, .4);
+}
+
+.benefit-items > div:last-child {
+    border: 0;
+}
+
+.benefit-items span {
+    color: var(--light-gold);
+    font-size: 30px;
+}
+
+.benefit-items h3 {
+    color: #fff6dc;
+    font: 600 21px "Cormorant Garamond", serif;
+    margin: 9px 0 5px;
+}
+
+.benefit-items p {
+    color: #e0e5d9;
+    font: 13px/1.55 Poppins, sans-serif;
+}
+
+/* Learning pathways */
+.music-pathways {
+    padding: 75px 6%;
+    background: #f8f0df;
+}
+
+.pathway-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1120px;
+    margin: auto;
+}
+
+.pathway-grid article {
+    padding: 30px 27px;
+    background: rgba(255, 255, 255, .78);
+    border-top: 3px solid #b18b45;
+    box-shadow: 0 9px 28px rgba(39, 49, 37, .06);
+}
+
+.path-icon {
+    color: #b18b45;
+    font: 700 34px "Cormorant Garamond", serif;
+}
+
+.pathway-grid h3 {
+    color: var(--green);
+    font: 700 25px "Cormorant Garamond", serif;
+    margin: 8px 0;
+}
+
+.pathway-grid p {
+    color: #657064;
+    font: 14px/1.6 Poppins, sans-serif;
+}
+
+/* Teaching approach */
+.music-approach {
+    display: grid;
+    grid-template-columns: 43% 57%;
+    min-height: 350px;
+    background: var(--dark-green);
+    color: #fff;
+}
+
+.approach-image {
+    min-height: 350px;
+    overflow: hidden;
+}
+
+.approach-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.approach-copy {
+    align-self: center;
+    padding: 55px 9%;
+}
+
+.approach-copy h2 {
+    color: var(--light-gold);
+    font: 700 clamp(31px, 4vw, 45px)/1.05 "Cormorant Garamond", serif;
+    margin: 8px 0 12px;
+}
+
+.approach-copy > p {
+    color: #e2e7dc;
+    font: 16px/1.65 "Cormorant Garamond", serif;
+    max-width: 650px;
+}
+
+.approach-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 23px;
+}
+
+.approach-tags span {
+    border: 1px solid rgba(221, 190, 120, .55);
+    border-radius: 30px;
+    padding: 8px 12px;
+    color: #fff5d8;
+    font: 11px Poppins, sans-serif;
+}
+
+/* Final enquiry strip */
+.instrument-cta {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 24px;
+    padding: 35px 7%;
+    background: #fff8e9;
+}
+
+.cta-flower {
+    color: #b18b45;
+    font-size: 48px;
+}
+
+.instrument-cta h2 {
+    color: var(--green);
+    font: 700 clamp(27px, 3.4vw, 40px)/1.05 "Cormorant Garamond", serif;
+    margin: 4px 0;
+}
+
+.instrument-cta p {
+    color: #667064;
+    font: 15px "Cormorant Garamond", serif;
+}
+
+.instrument-cta > a {
+    white-space: nowrap;
+    margin: 0;
+    padding: 14px 22px;
+}
+
+/* Tablet layout */
+@media (max-width: 950px) {
+    .instrument-feature-grid {
+        gap: 14px;
+    }
+
+    .feature-photo {
+        height: 245px;
+    }
+
+    .feature-content {
+        padding: 20px 17px 23px;
+    }
+
+    .benefit-items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .benefit-items > div:nth-child(2n) {
+        border: 0;
+    }
+}
+
+/* Mobile layout */
+@media (max-width: 700px) {
+    .instrument-hero {
+        grid-template-columns: 1fr;
+    }
+
+    .instrument-hero-image {
+        height: auto;
+        min-height: 0;
+        aspect-ratio: 3 / 2;
+    }
+
+    .instrument-hero-image img {
+        height: 100%;
+        object-position: center;
+    }
+
+    .instrument-hero-copy {
+        padding: 42px 7%;
+    }
+
+    .instrument-feature-grid {
+        grid-template-columns: 1fr;
+        max-width: 520px;
+    }
+
+    .feature-photo {
+        height: 310px;
+    }
+
+    .feature-content p {
+        min-height: 0;
+    }
+
+    .instrument-weekend-batches {
+        padding: 36px 4%;
+    }
+
+    .instrument-weekend-days {
+        grid-template-columns: 1fr;
+        gap: 11px;
+    }
+
+    .instrument-weekend-day {
+        min-height: 78px;
+    }
+
+    .pathway-grid {
+        grid-template-columns: 1fr;
+        max-width: 520px;
+    }
+
+    .music-approach {
+        grid-template-columns: 1fr;
+    }
+
+    .approach-image {
+        height: 250px;
+        min-height: 250px;
+    }
+
+    .approach-copy {
+        padding: 38px 7%;
+    }
+
+    .instrument-cta {
+        flex-direction: column;
+        text-align: center;
+        padding: 35px 7%;
+    }
+
+    .cta-flower {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 420px) {
+    .benefit-items {
+        grid-template-columns: 1fr;
+    }
+
+    .benefit-items > div {
+        border-right: 0;
+        border-bottom: 1px solid rgba(221, 190, 120, .3);
+    }
+
+    .benefit-items > div:last-child {
+        border: 0;
+    }
+
+    .feature-photo {
+        height: 250px;
+    }
+
+    .instrument-hero-copy h1 {
+        font-size: 46px;
+    }
+}
